@@ -11,7 +11,6 @@ import { environment } from '../../environments/environment';
 })
 export class PersonagensService {
 
-  baseUrl = "http://gateway.marvel.com//v1/public/characters?";
   publicKey = environment.publicKey;
   privateKey = "b410e09fff4d443af37eb05216a071cc708bb6c5"
   time = Number( new Date());
@@ -21,6 +20,6 @@ export class PersonagensService {
    public getPersonagens(){
      console.log(this.time)
     return this.http.
-    get<any>("http://gateway.marvel.com//v1/public/characters?ts=" + this.time + `&apikey=${environment.publicKey}&hash=` + this.hash).pipe(take(1));
+    get<any>("https://gateway.marvel.com//v1/public/characters?ts=" + this.time + `&apikey=${environment.publicKey}&hash=` + this.hash).pipe(take(1));
   }
 }
