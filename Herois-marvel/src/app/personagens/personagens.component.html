@@ -1,0 +1,13 @@
+<table class="ajuste">
+  <tbody *ngFor="let herois of perso">
+    <tr>
+      <p>{{ herois.name }}</p>
+      <img
+        src="{{ herois.thumbnail.path }}{{ imgSize }}.{{
+          herois.thumbnail.extension
+        }}"
+        alt=""
+      />
+    </tr>
+  </tbody>
+</table>

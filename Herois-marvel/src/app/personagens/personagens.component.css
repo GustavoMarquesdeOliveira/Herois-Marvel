@@ -1,0 +1,15 @@
+*{
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  align-self: center;
+  width: 100%;
+  grid-template-rows: auto;
+  height: 100%;
+}
+.ajuste{
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
