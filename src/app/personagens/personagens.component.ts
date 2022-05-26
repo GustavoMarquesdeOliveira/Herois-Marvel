@@ -9,7 +9,7 @@ import { PersonagensService } from 'src/app/service/personagens.service';
 })
 export class PersonagensComponent implements OnInit {
   perso: any;
-  imgSize:string = "/portrait_medium"
+  imgSize:string = "/portrait_uncanny"
 
   constructor(private personagensService: PersonagensService,) {}
 

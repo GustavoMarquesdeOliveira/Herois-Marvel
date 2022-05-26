@@ -1,13 +1,15 @@
-<table class="ajuste">
-  <tbody *ngFor="let herois of perso">
-    <tr>
-      <p>{{ herois.name }}</p>
-      <img
-        src="{{ herois.thumbnail.path }}{{ imgSize }}.{{
-          herois.thumbnail.extension
-        }}"
-        alt=""
-      />
-    </tr>
-  </tbody>
-</table>
+<section class="ajuste layout">
+  <div *ngFor="let herois of perso" class="gap">
+    <div class="linha">
+      <p class="name-layout">{{ herois.name }}</p>
+    </div>
+      <div class="img">
+        <img class="img-layout"
+          src="{{ herois.thumbnail.path }}{{ imgSize }}.{{
+            herois.thumbnail.extension
+          }}"
+          alt="Imagem-heroi"
+        />
+      </div>
+  </div>
+</section>
