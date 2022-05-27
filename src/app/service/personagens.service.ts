@@ -22,4 +22,14 @@ export class PersonagensService {
     return this.http.
     get<any>("https://gateway.marvel.com//v1/public/characters?ts=" + this.time + `&apikey=${environment.publicKey}&hash=` + this.hash).pipe(take(1));
   }
+  public getcomics(){
+    console.log(this.time)
+   return this.http.
+   get<any>("https://gateway.marvel.com//v1/public/comics?ts=" + this.time + `&apikey=${environment.publicKey}&hash=` + this.hash).pipe(take(1));
+ }
+ public getevento(){
+  console.log(this.time)
+ return this.http.
+ get<any>("https://gateway.marvel.com//v1/public/events?ts=" + this.time + `&apikey=${environment.publicKey}&hash=` + this.hash).pipe(take(1));
+}
 }

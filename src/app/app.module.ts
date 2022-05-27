@@ -8,6 +8,8 @@ import { PersonagensComponent } from './personagens/personagens.component';
 
 import { HttpClientModule } from "@angular/common/http";
 import { PersonagensService } from './service/personagens.service';
+import { ComicsComponent } from './comics/comics.component';
+import { EventoComponent } from './evento/evento.component';
 
 
 
@@ -16,6 +18,8 @@ import { PersonagensService } from './service/personagens.service';
     AppComponent,
     NavbarComponent,
     PersonagensComponent,
+    ComicsComponent,
+    EventoComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,7 @@ import { PersonagensService } from './service/personagens.service';
     HttpClientModule,
 
   ],
-  providers: [PersonagensService],
+  providers: [PersonagensService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
