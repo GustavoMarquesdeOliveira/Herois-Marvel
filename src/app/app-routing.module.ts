@@ -1,3 +1,4 @@
+import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import{ PersonagensComponent } from 'src/app/personagens/personagens.component'
@@ -8,6 +9,7 @@ const routes: Routes = [
   { path: "personagens", component: PersonagensComponent },
   { path: "comics", component: ComicsComponent },
   { path: "evento", component: EventoComponent },
+  {path: "nav", component: NavbarComponent },
 
 ];
 

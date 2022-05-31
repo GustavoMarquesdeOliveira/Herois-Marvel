@@ -4,3 +4,7 @@
   margin-right: auto;
   width: 100%;
 }
+.layout{
+  background: rgb(236,26,5);
+  background: linear-gradient(90deg, rgba(236,26,5,1) 0%, rgba(246,8,8,1) 32%, rgba(238,37,37,1) 100%);
+}

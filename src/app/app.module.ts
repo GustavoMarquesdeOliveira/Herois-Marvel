@@ -10,6 +10,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PersonagensService } from './service/personagens.service';
 import { ComicsComponent } from './comics/comics.component';
 import { EventoComponent } from './evento/evento.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -25,7 +26,7 @@ import { EventoComponent } from './evento/evento.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    BrowserAnimationsModule,
   ],
   providers: [PersonagensService,],
   bootstrap: [AppComponent]
