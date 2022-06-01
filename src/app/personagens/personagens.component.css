@@ -1,8 +1,5 @@
 *{
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
   display: inline-block;
 }
 .ajuste{
@@ -70,6 +67,7 @@ background: linear-gradient(90deg, rgba(236,26,5,1) 0%, rgba(246,8,8,1) 32%, rgb
   flex-direction: column;
   z-index: 1;
   border-image: none;
+  min-height: 100vh;
 }
 .loading{
   animation: rotacionar 1.5s infinite;
@@ -82,17 +80,20 @@ background: linear-gradient(90deg, rgba(236,26,5,1) 0%, rgba(246,8,8,1) 32%, rgb
 
 }
 @keyframes rotacionar {
-  25%{
-    transform: rotate(0.25turn)
+  20%{
+    transform: scale(2);
   }
-  50%{
-    transform: rotate(0.50turn)
+  40%{
+    transform: scale(3);
   }
-  75%{
-    transform: rotate(0.75turn)
+  60%{
+    transform: scale(4);
+  }
+  80%{
+    transform: scale(5);
   }
   100%{
-    transform: rotate(1turn)
+    transform: scale(6);
   }
 }
 .titulo-nav{
