@@ -1,15 +1,25 @@
-<section class="ajuste layout">
-  <div *ngFor="let herois of comics" class="gap">
-    <div class="linha">
-      <p class="name-layout">{{ herois.title }}</p>
-    </div>
-      <div class="img">
-        <img class="img-layout"
-          src="{{ herois.thumbnail.path }}{{ imgSize }}.{{
-            herois.thumbnail.extension
-          }}"
-          alt="Imagem-heroi"
-        />
+<ng-container *ngIf="hasValue; else loading">
+  <section class="ajuste layout-1">
+    <div *ngFor="let herois of comics" class="gap">
+      <div class="linha">
+        <p class="name-layout">{{ herois.title }}</p>
       </div>
-  </div>
-</section>
+        <div class="img">
+          <img class="img-layout"
+            src="{{ herois.thumbnail.path }}{{ imgSize }}.{{
+              herois.thumbnail.extension
+            }}"
+            alt="Imagem-heroi"
+          />
+        </div>
+    </div>
+  </section>
+</ng-container>
+<ng-template #loading>
+  <section class="layout">
+    <p class="titulo-nav">Abrindo o portal</p>
+    <div class="loading">
+      <div class="img-size"></div>
+    </div>
+  </section>
+</ng-template>

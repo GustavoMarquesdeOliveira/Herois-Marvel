@@ -10,6 +10,7 @@ import { PersonagensService } from 'src/app/service/personagens.service';
 export class PersonagensComponent implements OnInit {
   perso: any;
   imgSize:string = "/portrait_uncanny"
+  hasValue:boolean = false
 
   constructor(private personagensService: PersonagensService,) {}
 
@@ -20,6 +21,7 @@ export class PersonagensComponent implements OnInit {
     this.personagensService.getPersonagens().subscribe(
       (data) => {
         this.perso = data.data.results;
+        this.hasValue = true
       },
       (error) => {
         console.log(error);

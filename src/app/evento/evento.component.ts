@@ -11,6 +11,7 @@ export class EventoComponent implements OnInit {
   constructor(private personagensService: PersonagensService,) { }
   evento: any;
   imgSize:string = "/portrait_uncanny"
+  hasValue:boolean = false
 
   ngOnInit(): void {
     this.eventos()
@@ -19,6 +20,7 @@ export class EventoComponent implements OnInit {
     this.personagensService.getevento().subscribe(
       (data) => {
         this.evento = data.data.results;
+        this.hasValue = true
       },
       (error) => {
         console.log(error);

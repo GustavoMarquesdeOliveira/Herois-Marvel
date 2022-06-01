@@ -11,6 +11,7 @@ import { PersonagensService } from 'src/app/service/personagens.service';
 export class ComicsComponent implements OnInit {
   comics: any;
   imgSize:string = "/portrait_uncanny"
+  hasValue:boolean = false
   constructor(private personagensService: PersonagensService,) { }
 
   ngOnInit(): void {
@@ -20,6 +21,7 @@ export class ComicsComponent implements OnInit {
     this.personagensService.getcomics().subscribe(
       (data) => {
         this.comics = data.data.results;
+        this.hasValue = true
       },
       (error) => {
         console.log(error);

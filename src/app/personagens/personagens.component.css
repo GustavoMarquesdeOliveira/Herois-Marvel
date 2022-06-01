@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
 }
-.layout{
+.layout-1{
   background: rgb(236,26,5);
 background: linear-gradient(90deg, rgba(236,26,5,1) 0%, rgba(246,8,8,1) 32%, rgba(238,37,37,1) 100%);
 }
@@ -58,4 +58,44 @@ background: linear-gradient(90deg, rgba(236,26,5,1) 0%, rgba(246,8,8,1) 32%, rgb
     margin-bottom: 2rem;
     margin-top: 2rem;
   }
+}
+
+.layout{
+  background: rgb(236,26,5);
+  background: linear-gradient(90deg, rgba(236,26,5,1) 0%, rgba(246,8,8,1) 32%, rgba(238,37,37,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  flex-direction: column;
+  z-index: 1;
+  border-image: none;
+}
+.loading{
+  animation: rotacionar 1.5s infinite;
+}
+.img-size{
+  width: 5rem;
+  height: 5rem;
+  background-image: url('../../assets/img/portal.png');
+  background-size: contain;
+
+}
+@keyframes rotacionar {
+  25%{
+    transform: rotate(0.25turn)
+  }
+  50%{
+    transform: rotate(0.50turn)
+  }
+  75%{
+    transform: rotate(0.75turn)
+  }
+  100%{
+    transform: rotate(1turn)
+  }
+}
+.titulo-nav{
+  font-family: cursive;
+  color: aliceblue;
 }
